@@ -1,4 +1,4 @@
-import 'package:bookly_app/faetures/mainpage/presentation/views/main_page.dart';
+import 'package:bookly_app/faetures/splashpage/presentation/views/splash_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart' ;
 
@@ -12,7 +12,7 @@ class Booklyapp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const GetMaterialApp(
-    home: Mainpage(),
+    home: Splashpage(),
       
           );
       }

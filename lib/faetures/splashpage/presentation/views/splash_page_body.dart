@@ -1,8 +1,8 @@
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
-class MainPageBody extends StatelessWidget {
-  const MainPageBody({super.key});
+class SplashPageBody extends StatelessWidget {
+  const SplashPageBody({super.key});
 
   @override
   Widget build(BuildContext context) {
