@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:bookly_app/constants.dart';
+import 'package:bookly_app/faetures/splashpage/presentation/views/widgets/animation_refactor.dart';
 import 'package:flutter/material.dart';
 
 class SplashPageBody extends StatefulWidget {
@@ -29,20 +30,10 @@ class _SplashPageBodyState extends State<SplashPageBody> with TickerProviderStat
       
       children: [Image.asset('assets/boook.png',width: 200,height: 200,),
       const SizedBox(height: 25,),
-     AnimatedBuilder(
-      animation: sliding,
-       builder: (context,_) {
-         return SlideTransition(position:sliding,child: const Text('Bookly App',style: TextStyle(fontWeight:FontWeight.w900 ,fontSize: 23,),textAlign: TextAlign.center));
-       }
-     ),
+     SlidingAnimationWithBuilder(sliding: sliding,child: const Text('Bookly App',style: TextStyle(fontWeight:FontWeight.w900 ,fontSize: 23,),textAlign: TextAlign.center),),
      const SizedBox(height: 50,),
-    AnimatedBuilder(
-      animation: sliding,
-
-      builder: (context,_) {
-        return SlideTransition(position:sliding,child: const Center(child: CircularProgressIndicator(color: Colors.white,strokeWidth: 7,backgroundColor: Color.fromARGB(255, 240, 78, 66),)));
-      }
-    )],
+   SlidingAnimationWithBuilder(sliding: sliding, child: const Center(child: CircularProgressIndicator(color: Colors.white,strokeWidth: 7,backgroundColor: Color.fromARGB(255, 240, 78, 66),)))],
     );
   }
 }
+
