@@ -10,12 +10,13 @@ class SplashPageBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.stretch,
       
       children: [Image.asset('assets/boook.png',width: 200,height: 200,),
       const SizedBox(height: 25,),
-     const Center(child:  Text('Bookly App',style: TextStyle(fontWeight:FontWeight.w900 ,color: Colors.white,fontSize: 23))),
+     const Text('Bookly App',style: TextStyle(fontWeight:FontWeight.w900 ,fontSize: 23,),textAlign: TextAlign.center),
      const SizedBox(height: 50,),
-    const CircularProgressIndicator(color: Colors.white,strokeWidth: 7,backgroundColor: Color.fromARGB(255, 240, 78, 66),)],
+    const Center(child: CircularProgressIndicator(color: Colors.white,strokeWidth: 7,backgroundColor: Color.fromARGB(255, 240, 78, 66),))],
     );
   }
 }
