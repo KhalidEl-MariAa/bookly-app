@@ -17,10 +17,18 @@ class _SplashPageBodyState extends State<SplashPageBody> with TickerProviderStat
 
   @override
   void initState() {
-    // TODO: implement initState
+    
     aanimationController=AnimationController(vsync: this,duration:const Duration(seconds: 5));
     sliding=Tween<Offset>(begin: const Offset(0,5),end: Offset.zero).animate(aanimationController);
     aanimationController.forward();
+
+    
+  }
+  @override
+  void dispose() {
+    
+    super.dispose();
+    aanimationController.dispose();
   }
   @override
   Widget build(BuildContext context) {
