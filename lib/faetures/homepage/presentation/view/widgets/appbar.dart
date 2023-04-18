@@ -9,13 +9,14 @@ class CustomAppBar extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 40,horizontal: 25),
       child: Row(
+        mainAxisSize: MainAxisSize.min,
         
         children: [Column(children: [Image.asset('assets/boook.png',height: 50,),
    const Text('Bookly App',
    style: TextStyle(fontWeight:FontWeight.w900 ,fontSize: 10,),
    textAlign: TextAlign.center)],
 
-        mainAxisSize: MainAxisSize.min,),
+        ),
         const Spacer(),
         IconButton(onPressed: (){}, icon: const Icon(FontAwesomeIcons.magnifyingGlass))],
       ),
