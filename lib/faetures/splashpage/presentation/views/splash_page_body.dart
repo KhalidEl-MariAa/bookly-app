@@ -1,8 +1,11 @@
-import 'dart:ui';
 
-import 'package:bookly_app/constants.dart';
+
+
+import 'package:bookly_app/faetures/homepage/presentation/view/homepage.dart';
+
 import 'package:bookly_app/faetures/splashpage/presentation/views/widgets/animation_refactor.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class SplashPageBody extends StatefulWidget {
   const SplashPageBody({super.key});
@@ -18,12 +21,14 @@ class _SplashPageBodyState extends State<SplashPageBody> with TickerProviderStat
   @override
   void initState() {
     
-    aanimationController=AnimationController(vsync: this,duration:const Duration(seconds: 5));
-    sliding=Tween<Offset>(begin: const Offset(0,5),end: Offset.zero).animate(aanimationController);
-    aanimationController.forward();
+    initAnimation();
+
+    navigateToHome();
 
     
   }
+
+  
   @override
   void dispose() {
     
@@ -43,5 +48,23 @@ class _SplashPageBodyState extends State<SplashPageBody> with TickerProviderStat
    SlidingAnimationWithBuilder(sliding: sliding, child: const Center(child: CircularProgressIndicator(color: Colors.white,strokeWidth: 7,backgroundColor: Color.fromARGB(255, 240, 78, 66),)))],
     );
   }
+
+  
+  void initAnimation() {
+      aanimationController=AnimationController(vsync: this,duration:const Duration(seconds: 2));
+    sliding=Tween<Offset>(begin: const Offset(0,5),end: Offset.zero).animate(aanimationController);
+    aanimationController.forward();
+  }
+
+  void navigateToHome() {
+     Future.delayed(const Duration(seconds: 3),() {
+         Get.to((){
+          return const HomePage();},
+         duration: const Duration(seconds: 2),
+          transition: Transition.fade);
+
+    },);
+  }
+
 }
 
