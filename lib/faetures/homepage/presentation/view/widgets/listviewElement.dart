@@ -5,18 +5,21 @@ class ListViewElement extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: MediaQuery.of(context).size.height*0.23,
-      child: AspectRatio(
-        aspectRatio: 1/1.5,
-        child: Container(
-          
-          decoration:  BoxDecoration(
-            borderRadius: BorderRadius.circular(16),
-            color: Colors.red,
-            image: const DecorationImage(image: AssetImage('assets/bk1.jpg'),
-            fit: BoxFit.fill
-            ,)
+    return Padding(
+      padding: const EdgeInsets.all(4),
+      child: SizedBox(
+        height: MediaQuery.of(context).size.height*0.23,
+        child: AspectRatio(
+          aspectRatio: 1/1.5,
+          child: Container(
+            
+            decoration:  BoxDecoration(
+              borderRadius: BorderRadius.circular(16),
+              color: Colors.red,
+              image: const DecorationImage(image: AssetImage('assets/bk1.jpg'),
+              fit: BoxFit.fill
+              ,)
+            ),
           ),
         ),
       ),
