@@ -8,9 +8,18 @@ class Homepagebody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: const [CustomAppBar(),ListviewOfHomePage()],
-      
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: const [CustomAppBar(),
+        ListviewOfHomePage(),
+        Padding(
+          padding: EdgeInsets.only(left:14,top: 15),
+          child: Text('Best Seller',style: TextStyle(fontSize: 18,fontWeight: FontWeight.w600),),
+        )],
+        
+      ),
     );
   }
 }

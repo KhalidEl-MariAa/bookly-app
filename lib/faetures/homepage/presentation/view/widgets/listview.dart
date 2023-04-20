@@ -7,7 +7,7 @@ class ListviewOfHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left:15.0,top: 8,right: 20),
+      padding: const EdgeInsets.only(left:10.0,top: 8,right: 20),
       child: SizedBox(
         height: MediaQuery.of(context).size.height*0.24,
         child: ListView.builder(scrollDirection: Axis.horizontal,
