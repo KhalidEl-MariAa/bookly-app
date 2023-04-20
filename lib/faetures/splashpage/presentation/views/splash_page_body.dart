@@ -1,6 +1,7 @@
 
 
 
+import 'package:bookly_app/core/assets.dart';
 import 'package:bookly_app/faetures/homepage/presentation/view/homepage.dart';
 
 import 'package:bookly_app/faetures/splashpage/presentation/views/widgets/animation_refactor.dart';
@@ -41,7 +42,7 @@ class _SplashPageBodyState extends State<SplashPageBody> with TickerProviderStat
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.stretch,
       
-      children: [Image.asset('assets/boook.png',width: 200,height: 200,),
+      children: [Image.asset(Assets.logo,width: 200,height: 200,),
       const SizedBox(height: 25,),
      SlidingAnimationWithBuilder(sliding: sliding,child: const Text('Bookly App',style: TextStyle(fontWeight:FontWeight.w900 ,fontSize: 23,),textAlign: TextAlign.center),),
      const SizedBox(height: 50,),
