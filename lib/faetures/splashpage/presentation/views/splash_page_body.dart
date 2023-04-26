@@ -44,7 +44,7 @@ class _SplashPageBodyState extends State<SplashPageBody> with TickerProviderStat
       
       children: [Image.asset(Assets.logo,width: 200,height: 200,),
       const SizedBox(height: 25,),
-     SlidingAnimationWithBuilder(sliding: sliding,child: const Text('Bookly App',style: TextStyle(fontWeight:FontWeight.w900 ,fontSize: 23,),textAlign: TextAlign.center),),
+     SlidingAnimationWithBuilder(sliding: sliding,child: const Text('Bookly App',style: TextStyle(fontWeight:FontWeight.w900 ,fontSize: 23,fontFamily: 'Poppins'),textAlign: TextAlign.center),),
      const SizedBox(height: 50,),
    SlidingAnimationWithBuilder(sliding: sliding, child: const Center(child: CircularProgressIndicator(color: Colors.white,strokeWidth: 7,backgroundColor: Color.fromARGB(255, 240, 78, 66),)))],
     );

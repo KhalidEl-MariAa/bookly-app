@@ -14,7 +14,7 @@ class CustomAppBar extends StatelessWidget {
         
         children: [Column(children: [Image.asset(Assets.logo,height: 50,),
    const Text('Bookly App',
-   style: TextStyle(fontWeight:FontWeight.w900 ,fontSize: 10,),
+   style: TextStyle(fontWeight:FontWeight.w900 ,fontSize: 10,fontFamily: 'Poppins'),
    textAlign: TextAlign.center)],
 
         ),

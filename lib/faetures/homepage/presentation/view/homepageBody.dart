@@ -1,7 +1,11 @@
+
 import 'package:bookly_app/faetures/homepage/presentation/view/widgets/appbar.dart';
 import 'package:bookly_app/faetures/homepage/presentation/view/widgets/listview.dart';
 
 import 'package:flutter/material.dart';
+
+
+import 'widgets/bestsellerElement.dart';
 
 class Homepagebody extends StatelessWidget {
   const Homepagebody({super.key});
@@ -12,12 +16,14 @@ class Homepagebody extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: const [CustomAppBar(),
+        children: const [
+          CustomAppBar(),
         ListviewOfHomePage(),
         Padding(
-          padding: EdgeInsets.only(left:14,top: 15),
-          child: Text('Best Seller',style: TextStyle(fontSize: 18,fontWeight: FontWeight.normal),),
-        )],
+          padding: EdgeInsets.only(left:14,top: 20,bottom: 10),
+          child: Text('Best Seller',style: TextStyle(fontSize: 18,fontWeight: FontWeight.normal,fontFamily: 'Poppins'),),
+        ),
+        BestSellerElement()],
         
       ),
     );
