@@ -21,7 +21,7 @@ class Homepagebody extends StatelessWidget {
         ListviewOfHomePage(),
         Padding(
           padding: EdgeInsets.only(left:14,top: 20,bottom: 10),
-          child: Text('Best Seller',style: TextStyle(fontSize: 18,fontWeight: FontWeight.normal,fontFamily: 'Poppins'),),
+          child: Text('Best Seller',style: TextStyle(fontSize: 18,),),
         ),
         BestSellerElement()],
         

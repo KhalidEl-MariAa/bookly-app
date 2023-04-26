@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../core/assets.dart';
+import 'package:google_fonts/google_fonts.dart';
 class BestSellerElement extends StatelessWidget {
     const BestSellerElement({super.key});
 
@@ -28,7 +29,8 @@ class BestSellerElement extends StatelessWidget {
       (child: Padding(
         padding: const EdgeInsets.only(right:8.0),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start
-          ,children: [const Text('Book Title')
+          ,children: [ Text('Book Title',style: GoogleFonts.adamina(
+          ),)
           ,Text('Book Description : What are the topics that the book discuss',style: TextStyle(color: Colors.white.withOpacity(0.5)),)
           , Padding(
             padding: const EdgeInsets.only(top:9.0),
