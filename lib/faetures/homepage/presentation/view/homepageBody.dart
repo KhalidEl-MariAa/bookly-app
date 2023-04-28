@@ -14,16 +14,21 @@ class Homepagebody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: const [
-          CustomAppBar(),
-        ListviewOfHomePage(),
-        Padding(
-          padding: EdgeInsets.only(left:14,top: 20,),
-          child: Text('Best Seller',style: TextStyle(fontSize: 18,),),
+      child: CustomScrollView(
+        slivers:[ SliverToBoxAdapter(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: const [
+              CustomAppBar(),
+            ListviewOfHomePage(),
+            Padding(
+              padding: EdgeInsets.only(left:14,top: 20,),
+              child: Text('Best Seller',style: TextStyle(fontSize: 18,),),
+            ),
+            ]
+          ),
         ),
-        BestSellerListView()],
+        const  SliverToBoxAdapter(child: BestSellerListView())],
         
       ),
     );
