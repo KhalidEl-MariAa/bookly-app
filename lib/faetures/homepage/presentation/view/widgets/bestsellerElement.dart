@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 import '../../../../../core/assets.dart';
@@ -34,24 +36,25 @@ class BestSellerElement extends StatelessWidget {
       (child: Padding(
         padding: const EdgeInsets.only(right:8.0),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start
-          ,children: [ Text('Book Title',style: GoogleFonts.adamina(
-          ).copyWith(fontSize: 15),maxLines: 2, overflow: TextOverflow.ellipsis,)
+          ,children: [ Text('Book Title',style: GoogleFonts.adamina().copyWith(fontSize: 15)
+          ,maxLines: 2,
+           overflow: TextOverflow.ellipsis,)
           ,Padding(
             padding: const EdgeInsets.only(top:7.0),
             child: Text('Book Description : What are the topics that the book discuss',
             maxLines: 3,
             overflow: TextOverflow.ellipsis
-            ,style: TextStyle(color: Colors.white.withOpacity(0.5)),),
-          )
-          , Padding(
+            ,style: TextStyle(color: Colors.white.withOpacity(0.5),fontSize: 13))),
+          
+           Padding(
             padding: const EdgeInsets.only(top:7.0),
             child: Row(
               children:  [
-                const Text('25.75 L.E',style: TextStyle(fontSize: 16),),
+                 Text('25.75 L.E',style: GoogleFonts.adamina().copyWith(fontSize: 15,fontWeight: FontWeight.bold),),
                 SizedBox(width: MediaQuery.of(context).size.width*0.22,),
                 const Icon(Icons.star,size: 15,),
                  SizedBox(width: MediaQuery.of(context).size.width*0.009),
-                const Text('4.5')],
+                const Text('4.5',style: TextStyle(fontSize: 15),)],
             ),
           )],),))  
           ,],
