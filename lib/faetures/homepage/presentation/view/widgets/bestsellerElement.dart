@@ -10,7 +10,7 @@ class BestSellerElement extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only (right: 8,left: 8,top: 7),
+      padding: const EdgeInsets.only (right: 8,left: 8,bottom: 20),
       child: Row(
         
         children: [SizedBox(
