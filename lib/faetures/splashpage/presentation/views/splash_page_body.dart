@@ -61,7 +61,7 @@ class _SplashPageBodyState extends State<SplashPageBody> with TickerProviderStat
 
   void navigateToHome() {
      Future.delayed(const Duration(seconds: 3),() {
-      GoRouter.of(context).push(HomePage.homeRoute);
+      GoRouter.of(context).push(Routes.homeRoute);
        
     },);
   }
