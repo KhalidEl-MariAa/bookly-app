@@ -2,11 +2,13 @@
 
 
 import 'package:bookly_app/core/assets.dart';
+import 'package:bookly_app/core/routing.dart';
 import 'package:bookly_app/faetures/homepage/presentation/view/homepage.dart';
 
 import 'package:bookly_app/faetures/splashpage/presentation/views/widgets/animation_refactor.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:go_router/go_router.dart';
+
 
 class SplashPageBody extends StatefulWidget {
   const SplashPageBody({super.key});
@@ -59,11 +61,8 @@ class _SplashPageBodyState extends State<SplashPageBody> with TickerProviderStat
 
   void navigateToHome() {
      Future.delayed(const Duration(seconds: 3),() {
-         Get.to((){
-          return const HomePage();},
-         duration: const Duration(seconds: 2),
-          transition: Transition.fade);
-
+      GoRouter.of(context).push(HomePage.homeRoute);
+       
     },);
   }
 

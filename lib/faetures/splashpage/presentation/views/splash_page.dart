@@ -5,6 +5,7 @@ import 'package:flutter/src/widgets/framework.dart';
 
 class Splashpage extends StatelessWidget {
   const Splashpage({super.key});
+  static String splashRoute = '/';
 
   @override
   Widget build(BuildContext context) {
