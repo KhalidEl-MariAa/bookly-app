@@ -1,3 +1,4 @@
+import 'package:bookly_app/faetures/book_details/presentation/view/widgets/bd_AppBar.dart';
 import 'package:flutter/material.dart';
 
 class BookDetailsPageBody extends StatelessWidget {
@@ -18,21 +19,3 @@ class BookDetailsPageBody extends StatelessWidget {
 }
 
 
-class BookDetailsAppBar extends StatelessWidget {
-  const BookDetailsAppBar({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(children: [
-      IconButton(onPressed: (){},
-      iconSize: 27,
-       icon: const Icon(Icons.highlight_remove)),
-      const Spacer(),
-       IconButton(onPressed: (){},
-       iconSize: 27,
-       icon: const Icon(Icons.shopping_cart_outlined))
-
-
-    ],);
-  }
-}
