@@ -1,7 +1,7 @@
 import 'dart:ui';
 
 import 'package:bookly_app/core/routing.dart';
-import 'package:bookly_app/faetures/homepage/presentation/view/widgets/rating.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -53,9 +53,16 @@ class BestSellerElement extends StatelessWidget {
             overflow: TextOverflow.ellipsis
             ,style: TextStyle(color: Colors.white.withOpacity(0.5),fontSize: 13))),
           
-          const  Padding(
-            padding:  EdgeInsets.only(top:7.0),
-            child: Rating()
+            Padding(
+            padding:  const EdgeInsets.only(top:7.0),
+            child: Row(
+              children:  [
+                 Text('25.75 L.E',style: GoogleFonts.adamina().copyWith(fontSize: 15,fontWeight: FontWeight.bold),),
+                SizedBox(width: MediaQuery.of(context).size.width*0.22,),
+                const Icon(Icons.star_rate,size: 15,),
+                 SizedBox(width: MediaQuery.of(context).size.width*0.009),
+                const Text('4.5',style: TextStyle(fontSize: 15,),)],
+    )
           )],),))  
           ,],
       ),

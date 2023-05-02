@@ -1,4 +1,5 @@
 import 'package:bookly_app/faetures/book_details/presentation/view/widgets/bd_AppBar.dart';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -12,6 +13,7 @@ class BookDetailsPageBody extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         body: Column(
+         
           children:  [
            const Padding(
             padding: EdgeInsets.all(13),
@@ -27,7 +29,15 @@ class BookDetailsPageBody extends StatelessWidget {
             child: Text('Book Description : What are the topics that the book discuss',
             maxLines: 3,
             overflow: TextOverflow.ellipsis
-            ,style: TextStyle(color: Colors.white.withOpacity(0.5),fontSize: 13)))],
+            ,style: TextStyle(color: Colors.white.withOpacity(0.5),fontSize: 13))),
+           Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+              children:  [
+              
+                const Icon(Icons.star_rate,size: 17,),
+                 SizedBox(width: MediaQuery.of(context).size.width*0.009),
+               const  Text('4.5',style: TextStyle(fontSize: 15,),)],
+    )],
            ),
       ),
     );
