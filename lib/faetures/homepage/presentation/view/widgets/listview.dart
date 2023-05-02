@@ -12,7 +12,7 @@ class ListviewOfHomePage extends StatelessWidget {
         height: MediaQuery.of(context).size.height*0.24,
         child: ListView.builder(scrollDirection: Axis.horizontal,
         itemCount: 10,
-       itemBuilder: (context, index) => const ListViewElement(),),
+       itemBuilder: (context, index) =>  ListViewElement(height: MediaQuery.of(context).size.height*0.23),),
       ),
     );
   }

@@ -4,7 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 class ListViewElement extends StatelessWidget {
-  const ListViewElement({super.key});
+   ListViewElement({super.key,required this.height});
+  double height;
+  
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +17,7 @@ class ListViewElement extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(4),
         child: SizedBox(
-          height: MediaQuery.of(context).size.height*0.23,
+          height: height,
           child: AspectRatio(
             aspectRatio: 1/1.5,
             child: Container(
