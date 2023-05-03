@@ -1,4 +1,5 @@
 import 'package:bookly_app/faetures/book_details/presentation/view/widgets/bd_AppBar.dart';
+import 'package:bookly_app/faetures/book_details/presentation/view/widgets/bd_buttonRow.dart';
 import 'package:bookly_app/faetures/book_details/presentation/view/widgets/bd_rating.dart';
 
 import 'package:flutter/material.dart';
@@ -8,6 +9,7 @@ import '../../../homepage/presentation/view/widgets/listviewElement.dart';
 
 class BookDetailsPageBody extends StatelessWidget {
   const BookDetailsPageBody({super.key});
+
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +23,7 @@ class BookDetailsPageBody extends StatelessWidget {
             child: BookDetailsAppBar(),
           ),
 
-          
+
           ListViewElement(height: MediaQuery.of(context).size.height*0.28,),
            Padding(
              padding: const EdgeInsets.only(top:32),
@@ -35,10 +37,17 @@ class BookDetailsPageBody extends StatelessWidget {
             overflow: TextOverflow.ellipsis
             ,style: TextStyle(color: Colors.white.withOpacity(0.5),fontSize: 13))),
 
-           const RatingPart()],
+          const RatingPart(),
+           const Padding(
+             padding:  EdgeInsets.only(top:10),
+             child:  RowOfButtonActions(),
+           )
+           ],
            ),
       ),
     );
   }
 }
+
+
 

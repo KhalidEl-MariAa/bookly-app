@@ -1,6 +1,6 @@
 import 'package:bookly_app/constants.dart';
 import 'package:bookly_app/core/routing.dart';
-import 'package:bookly_app/faetures/splashpage/presentation/views/splash_page.dart';
+
 import 'package:flutter/material.dart';
 
 
