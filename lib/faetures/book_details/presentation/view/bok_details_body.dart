@@ -1,6 +1,7 @@
 import 'package:bookly_app/faetures/book_details/presentation/view/widgets/bd_AppBar.dart';
 import 'package:bookly_app/faetures/book_details/presentation/view/widgets/bd_buttonRow.dart';
 import 'package:bookly_app/faetures/book_details/presentation/view/widgets/bd_rating.dart';
+import 'package:bookly_app/faetures/homepage/presentation/view/widgets/listview.dart';
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -16,6 +17,7 @@ class BookDetailsPageBody extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         body: Column(
+          
          
           children:  [
            const Padding(
@@ -41,6 +43,21 @@ class BookDetailsPageBody extends StatelessWidget {
            const Padding(
              padding:  EdgeInsets.only(top:10),
              child:  RowOfButtonActions(),
+            
+           ),
+        const Padding(
+           padding:  EdgeInsets.only(left:30,top: 30),
+           child:  Align(
+            alignment: Alignment.centerLeft,
+               child: Text('You may also like',style: TextStyle(fontSize: 18,),
+                   
+                 
+               ),
+             ),
+         ),
+          const Padding(
+             padding:  EdgeInsets.only(left:30),
+             child:  ListviewOfHomePage(),
            )
            ],
            ),
