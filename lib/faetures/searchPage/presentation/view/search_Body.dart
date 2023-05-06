@@ -11,15 +11,28 @@ class SearchPageBody extends StatelessWidget {
     return Scaffold(
       body: SafeArea(child: 
       Column(
-        
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
      IconButton(
       onPressed: 
         (() {
           GoRouter.of(context).pop();
         }),
-      icon: const Icon(Icons.keyboard_return_outlined,))
+      icon: const Icon(Icons.keyboard_return_outlined,)),
+        const SizedBox(
+          height: 50,
+        ),
+     TextFormField(
+      decoration:InputDecoration(
+        hintText: 'Write book`s name',
+        border: OutlineInputBorder(borderRadius: BorderRadius.circular(25)),
+        disabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(25)) ,
+        enabledBorder: UnderlineInputBorder(),
+        
 
+      ) ,
+      
+     )
 
       ],)),
     );
