@@ -6,18 +6,20 @@ class BookDetailsAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(children: [
-      IconButton(
-      onPressed: (){GoRouter.of(context).pop();},
-      iconSize: 27,
-       icon: const Icon(Icons.highlight_remove)),
-      const Spacer(),
-       IconButton(
-       onPressed: (){},
-       iconSize: 27,
-       icon: const Icon(Icons.shopping_cart_outlined))
-
-
-    ],);
+    return Row(
+      children: [
+        IconButton(
+            onPressed: () {
+              GoRouter.of(context).pop();
+            },
+            iconSize: 27,
+            icon: const Icon(Icons.highlight_remove)),
+        const Spacer(),
+        IconButton(
+            onPressed: () {},
+            iconSize: 27,
+            icon: const Icon(Icons.shopping_cart_outlined))
+      ],
+    );
   }
 }

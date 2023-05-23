@@ -3,23 +3,17 @@ import 'package:flutter/material.dart';
 
 class SearchListView extends StatelessWidget {
   const SearchListView({super.key});
-  
 
   @override
   Widget build(BuildContext context) {
-    return  ListView.builder(
+    return ListView.builder(
       padding: EdgeInsets.zero,
-      
-      
-      shrinkWrap: true, 
-      itemBuilder: (context, index) =>const Padding(
-        padding:  EdgeInsets.only(top:10.0),
-        child:  BestSellerElement(),
+      shrinkWrap: true,
+      itemBuilder: (context, index) => const Padding(
+        padding: EdgeInsets.only(top: 10.0),
+        child: BestSellerElement(),
       ),
-      
       itemCount: 10,
-      
     );
-      
-      }}
-        
+  }
+}

@@ -7,12 +7,15 @@ class ListviewOfHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 8,right: 20),
+      padding: const EdgeInsets.only(top: 8, right: 20),
       child: SizedBox(
-        height: MediaQuery.of(context).size.height*0.24,
-        child: ListView.builder(scrollDirection: Axis.horizontal,
-        itemCount: 10,
-       itemBuilder: (context, index) =>  ListViewElement(height: MediaQuery.of(context).size.height*0.23),),
+        height: MediaQuery.of(context).size.height * 0.24,
+        child: ListView.builder(
+          scrollDirection: Axis.horizontal,
+          itemCount: 10,
+          itemBuilder: (context, index) => ListViewElement(
+              height: MediaQuery.of(context).size.height * 0.23),
+        ),
       ),
     );
   }
