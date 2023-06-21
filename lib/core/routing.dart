@@ -12,8 +12,7 @@ abstract class Routes {
 
   static final router = GoRouter(routes: [
     GoRoute(
-        path: splashRoute,
-        builder: ((context, state) => const Splashpage())),
+        path: splashRoute, builder: ((context, state) => const Splashpage())),
     GoRoute(
       path: homeRoute,
       builder: (context, state) => const HomePage(),
