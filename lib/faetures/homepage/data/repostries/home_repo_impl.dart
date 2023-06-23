@@ -10,7 +10,7 @@ class HomeRepoImpl implements HomeRepo{
   final APIService apiService=APIService();
 
   @override
-  Future<Either<Failures, List<BookModel>>> fetchBestsellerBooks()async {
+  Future<Either<Failures, List<BookModel>>> fetchNewestBooks()async {
 
    try {
     var data =await apiService.get(endpoint: 'https://www.googleapis.com/books/v1/volumes?Filtering=free-ebooks&Sorting=newest &q=subject:programming&download=epub');
