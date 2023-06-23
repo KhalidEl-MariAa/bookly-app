@@ -1,7 +1,11 @@
+import 'package:bookly_app/faetures/homepage/data/failures/failures.dart';
+import 'package:bookly_app/faetures/homepage/data/models/book_model/book_model.dart';
+import 'package:dartz/dartz.dart';
+
 abstract class HomeRepo{
 
-FetchListviewBooks();
+Future<Either<Failures,List<BookModel>>>  FetchListviewBooks();
 
-FetchBestsellerBooks();
+Future<Either<Failures,List<BookModel>>> FetchBestsellerBooks();
 
 }
