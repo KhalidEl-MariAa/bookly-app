@@ -3,7 +3,6 @@ import 'package:bookly_app/faetures/homepage/data/models/book_model/book_model.d
 import 'package:bookly_app/faetures/homepage/data/failures/failures.dart';
 import 'package:bookly_app/faetures/homepage/data/repostries/home_repo.dart';
 import 'package:dartz/dartz.dart';
-import 'package:dartz/dartz_unsafe.dart';
 import 'package:dio/dio.dart';
 
 class HomeRepoImpl implements HomeRepo{
@@ -14,7 +13,7 @@ class HomeRepoImpl implements HomeRepo{
   Future<Either<Failures, List<BookModel>>> fetchNewestBooks()async {
 
    try {
-    var data =await apiService.get(endpoint: 'https://www.googleapis.com/books/v1/volumes?Filtering=free-ebooks&Sorting=newest &q=subject:programming&download=epub');
+    var data =await apiService.get(endpoint: 'volumes?Filtering=free-ebooks&Sorting=newest &q=subject:programming&download=epub');
     List<BookModel> books= [];
 
     for (var i in data['items']) {
@@ -41,8 +40,26 @@ class HomeRepoImpl implements HomeRepo{
   }
 
   @override
-  Future<Either<Failures, List<BookModel>>> fetchListviewBooks() {
-    
+  Future<Either<Failures, List<BookModel>>> fetchListviewBooks()async {
+    try {
+      var data= await apiService.get(endpoint: 'volumes?Filtering=free-ebooks&Sorting=newest &q=subject:novel&download=epub');
+      List<BookModel> boooks =[];
+
+      for(var i in data['items']){
+        boooks.add(BookModel.fromBookData(i));
+      }
+      return right(boooks);
+
+    } catch (e) {
+
+      if (e is DioException){
+        return left(ServerFailure.fromDioError(e));
+      }
+      else{
+        return left(ServerFailure(e.toString()));
+      }
+      
+    }
   }
 
   
