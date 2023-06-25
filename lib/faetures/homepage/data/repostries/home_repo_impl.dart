@@ -4,6 +4,7 @@ import 'package:bookly_app/faetures/homepage/data/failures/failures.dart';
 import 'package:bookly_app/faetures/homepage/data/repostries/home_repo.dart';
 import 'package:dartz/dartz.dart';
 import 'package:dartz/dartz_unsafe.dart';
+import 'package:dio/dio.dart';
 
 class HomeRepoImpl implements HomeRepo{
 
@@ -26,7 +27,13 @@ class HomeRepoImpl implements HomeRepo{
      
    } 
    catch (e) {
-     return left(TempFailure());
+     if (e is DioException ) {
+     return left(ServerFailure.fromDioError(e));
+       
+     }
+     else{
+      return left(ServerFailure(e.toString()));
+     }
    }
 
 
