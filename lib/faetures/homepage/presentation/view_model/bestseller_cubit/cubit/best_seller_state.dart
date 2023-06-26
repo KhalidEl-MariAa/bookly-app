@@ -9,7 +9,12 @@ abstract class BestSellerState extends Equatable {
 
 class BestSellerInitial extends BestSellerState {}
 
-class BestSellerSucess extends BestSellerState {}
+class BestSellerSucess extends BestSellerState {
+  final List<BookModel> books;
+
+ const BestSellerSucess(this.books);
+  
+}
 
 class BestSellerLoading extends BestSellerState {}
 
