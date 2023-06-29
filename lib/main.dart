@@ -1,5 +1,6 @@
 import 'package:bookly_app/constants.dart';
 import 'package:bookly_app/core/routing.dart';
+import 'package:bloc/bloc.dart' ;
 
 import 'package:flutter/material.dart';
 
@@ -12,11 +13,24 @@ class Booklyapp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      routerConfig: Routes.router,
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(brightness: Brightness.dark, fontFamily: 'Poppins')
-          .copyWith(scaffoldBackgroundColor: kpcolor),
-    );
+    return 
+      MultiBlocProvider(
+        providers: [
+          BlocProvider(
+            create: (context) => SubjectBloc(),
+          ),
+          BlocProvider(
+            create: (context) => SubjectBloc(),
+          ),
+        ],
+        child: Container(),
+      )(
+        child: MaterialApp.router(
+        routerConfig: Routes.router,
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(brightness: Brightness.dark, fontFamily: 'Poppins')
+            .copyWith(scaffoldBackgroundColor: kpcolor),
+          ),
+      );
   }
 }
