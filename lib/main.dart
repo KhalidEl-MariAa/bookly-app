@@ -11,7 +11,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 
 
-void main() {
+void main() async {
+   WidgetsFlutterBinding.ensureInitialized();
+   setup();
   runApp(const Booklyapp());
 }
 
@@ -27,7 +29,7 @@ class Booklyapp extends StatelessWidget {
             create: (context) => BestSellerCubit(getit.get<HomeRepoImpl>()),
           ),
           BlocProvider(
-            create: (context) => ListViewBooksCubit(getit.get<HomeRepoImpl>()),
+            create: (context) => ListViewBooksCubit(getit.get<HomeRepoImpl>())..fetchListViewBooks(),
           ),
         ],
         child: MaterialApp.router(

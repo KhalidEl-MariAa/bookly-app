@@ -3,9 +3,10 @@ import 'package:bookly_app/faetures/homepage/data/repostries/home_repo_impl.dart
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 
-var getit= GetIt.instance;
+final getit= GetIt.instance;
 
-void setup(){
+void setup()async{
+  getit.registerSingleton<APIService>(APIService(Dio()));  
 
   getit.registerSingleton<HomeRepoImpl>(
     HomeRepoImpl(
@@ -13,7 +14,7 @@ void setup(){
         )
         ); 
 
-    getit.registerSingleton<APIService>(APIService(Dio()));    
+      
   
 
 }
