@@ -36,6 +36,11 @@ class ServerFailure extends Failures{
       case DioExceptionType.unknown:
         return ServerFailure('Sorry for that , there was an error try later!');
 
+      default:
+       return ServerFailure('Sorry for that , there was an error try later!');
+
+
+
 
     }}
 
