@@ -18,11 +18,12 @@ class ListviewOfHomePage extends StatelessWidget {
           return Padding(
         padding: const EdgeInsets.only(top: 8, right: 20),
         child: SizedBox(
-          height: MediaQuery.of(context).size.height * 0.24,
+          height: MediaQuery.of(context).size.height * 0.30,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
-            itemCount: 10,
+            itemCount: state.books.length,
             itemBuilder: (context, index) => ListViewElement(
+              imageURL: state.books[index].volumeInfo!.imageLinks!.thumbnail.toString(),
                 height: MediaQuery.of(context).size.height * 0.23),
           ),
         ),

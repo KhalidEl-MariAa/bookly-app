@@ -4,8 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 class ListViewElement extends StatelessWidget {
-  ListViewElement({super.key, required this.height});
+  ListViewElement({super.key, required this.height,required this.imageURL});
   double height;
+  String imageURL;
 
   @override
   Widget build(BuildContext context) {
@@ -14,17 +15,17 @@ class ListViewElement extends StatelessWidget {
         GoRouter.of(context).push(Routes.bdroute);
       },
       child: Padding(
-        padding: const EdgeInsets.all(4),
+        padding: const EdgeInsets.all(7),
         child: SizedBox(
           height: height,
           child: AspectRatio(
             aspectRatio: 1 / 1.5,
             child: Container(
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(16),
+                  borderRadius: BorderRadius.circular(10),
                   color: Colors.red,
-                  image: const DecorationImage(
-                    image: AssetImage(Assets.book1),
+                  image:  DecorationImage(
+                    image: NetworkImage(imageURL),
                     fit: BoxFit.fill,
                   )),
             ),

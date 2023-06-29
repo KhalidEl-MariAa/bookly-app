@@ -24,6 +24,7 @@ class BookDetailsPageBody extends StatelessWidget {
                   child: BookDetailsAppBar(),
                 ),
                 ListViewElement(
+                  imageURL: 'https://www.bing.com/images/search?view=detailV2&ccid=rnWvsFOK&id=2BC92A8266059B4433B57F91FCA50DADB16E2EB8&thid=OIP.rnWvsFOKA0x9mRkq3EYZ1QHaEK&mediaurl=https%3a%2f%2fi.ytimg.com%2fvi%2fGHna7XsxRhI%2fmaxresdefault.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.ae75afb0538a034c7d99192adc4619d5%3frik%3duC5usa0NpfyRfw%26pid%3dImgRaw%26r%3d0&exph=720&expw=1280&q=image+path+on+colab&simid=608029642905893436&FORM=IRPRST&ck=D27B2A383D3350189819C03B30C1726B&selectedIndex=5',
                   height: MediaQuery.of(context).size.height * 0.28,
                 ),
                 Padding(
