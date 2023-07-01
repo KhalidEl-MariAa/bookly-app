@@ -1,3 +1,4 @@
+import 'package:bookly_app/faetures/homepage/data/models/book_model/book_model.dart';
 import 'package:bookly_app/faetures/homepage/presentation/view/widgets/bestsellerElement.dart';
 import 'package:flutter/material.dart';
 
@@ -11,7 +12,7 @@ class SearchListView extends StatelessWidget {
       shrinkWrap: true,
       itemBuilder: (context, index) =>  Padding(
         padding:const  EdgeInsets.only(top: 10.0),
-        child: BestSellerElement(imageURL: ''),
+        child: BestSellerElement(bookmodel: BookModel(),),
       ),
       itemCount: 10,
     );

@@ -19,7 +19,7 @@ class BestSellerListView extends StatelessWidget {
           shrinkWrap: true,
           itemBuilder: (context, index) =>  Padding(
             padding: const EdgeInsets.only(right: 8.0, left: 8, bottom: 5, top: 15),
-            child: BestSellerElement(imageURL: state.books[index].volumeInfo!.imageLinks!.thumbnail),
+            child: BestSellerElement(bookmodel: state.books[index]),
           ),
           itemCount: state.books.length,
         );}
