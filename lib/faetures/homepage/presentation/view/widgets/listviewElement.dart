@@ -1,5 +1,6 @@
 import 'package:bookly_app/core/assets.dart';
 import 'package:bookly_app/core/routing.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -20,15 +21,10 @@ class ListViewElement extends StatelessWidget {
           height: height,
           child: AspectRatio(
             aspectRatio: 1 / 1.5,
-            child: Container(
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Colors.red,
-                  image:  DecorationImage(
-                    image: NetworkImage(imageURL),
-                    fit: BoxFit.fill,
-                  )),
-            ),
+            child: CachedNetworkImage(
+              imageUrl: imageURL,
+              fit: BoxFit.fill,
+              errorWidget: (context, url, error) =>const Icon(Icons.error),)
           ),
         ),
       ),
