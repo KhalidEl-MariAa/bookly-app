@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:bookly_app/core/routing.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -11,7 +12,8 @@ import '../../../../../core/assets.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class BestSellerElement extends StatelessWidget {
-  const BestSellerElement({super.key});
+   BestSellerElement({super.key,required this.imageURL});
+  final String? imageURL;
 
   @override
   Widget build(BuildContext context) {
@@ -25,15 +27,10 @@ class BestSellerElement extends StatelessWidget {
             height: MediaQuery.of(context).size.height * 0.20,
             child: AspectRatio(
               aspectRatio: 1.5 / 2,
-              child: Container(
-                decoration: BoxDecoration(
-                    image: const DecorationImage(
-                        image: AssetImage(
-                          Assets.book1,
-                        ),
-                        fit: BoxFit.fill),
-                    borderRadius: BorderRadius.circular(13)),
-              ),
+              child: CachedNetworkImage(
+                imageUrl: imageURL!,
+                errorWidget: (context, url, error) => const Icon(Icons.error),
+              )
             ),
           ),
           const SizedBox(width: 30),

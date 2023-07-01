@@ -9,9 +9,9 @@ class SearchListView extends StatelessWidget {
     return ListView.builder(
       padding: EdgeInsets.zero,
       shrinkWrap: true,
-      itemBuilder: (context, index) => const Padding(
-        padding: EdgeInsets.only(top: 10.0),
-        child: BestSellerElement(),
+      itemBuilder: (context, index) =>  Padding(
+        padding:const  EdgeInsets.only(top: 10.0),
+        child: BestSellerElement(imageURL: ''),
       ),
       itemCount: 10,
     );
