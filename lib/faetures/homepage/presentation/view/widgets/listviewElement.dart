@@ -5,9 +5,10 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 class ListViewElement extends StatelessWidget {
-  ListViewElement({super.key, required this.height,required this.imageURL});
+  ListViewElement({super.key, required this.height,required this.imageURL,required this.aspectRatio});
   double height;
   String imageURL;
+  double aspectRatio;
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +21,7 @@ class ListViewElement extends StatelessWidget {
         child: SizedBox(
           height: height,
           child: AspectRatio(
-            aspectRatio: 1 / 1.5,
+            aspectRatio: aspectRatio,
             child: CachedNetworkImage(
               imageUrl: imageURL,
               fit: BoxFit.fill,

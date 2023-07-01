@@ -23,8 +23,9 @@ class ListviewOfHomePage extends StatelessWidget {
             scrollDirection: Axis.horizontal,
             itemCount: state.books.length,
             itemBuilder: (context, index) => ListViewElement(
+              aspectRatio: 1/1.5,
               imageURL: state.books[index].volumeInfo!.imageLinks!.thumbnail.toString(),
-                height: MediaQuery.of(context).size.height * 0.23),
+                height: MediaQuery.of(context).size.height * 0.25),
           ),
         ),
       );

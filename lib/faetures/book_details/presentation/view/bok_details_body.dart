@@ -15,63 +15,81 @@ class BookDetailsPageBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: CustomScrollView(slivers: [
-          SliverFillRemaining(
-            child: Column(
-              children: [
-                const Padding(
-                  padding: EdgeInsets.all(13),
-                  child: BookDetailsAppBar(),
-                ),
-                ListViewElement(
-                  imageURL: 'https://www.bing.com/images/search?view=detailV2&ccid=rnWvsFOK&id=2BC92A8266059B4433B57F91FCA50DADB16E2EB8&thid=OIP.rnWvsFOKA0x9mRkq3EYZ1QHaEK&mediaurl=https%3a%2f%2fi.ytimg.com%2fvi%2fGHna7XsxRhI%2fmaxresdefault.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.ae75afb0538a034c7d99192adc4619d5%3frik%3duC5usa0NpfyRfw%26pid%3dImgRaw%26r%3d0&exph=720&expw=1280&q=image+path+on+colab&simid=608029642905893436&FORM=IRPRST&ck=D27B2A383D3350189819C03B30C1726B&selectedIndex=5',
-                  height: MediaQuery.of(context).size.height * 0.28,
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 32),
-                  child: Text('The Book Title ',
-                      style: GoogleFonts.adamina()
-                          .copyWith(fontSize: 19, fontWeight: FontWeight.bold)),
-                ),
-                const Expanded(
-                    child: SizedBox(
-                  height: 7,
-                )),
-                Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 30),
-                    child: Text(
-                        'Book Description : What are the topics that the book discuss',
-                        maxLines: 3,
-                        overflow: TextOverflow.ellipsis,
-                        style: TextStyle(
-                            color: Colors.white.withOpacity(0.5),
-                            fontSize: 13))),
-                const RatingPart(),
-                const Padding(
-                  padding: EdgeInsets.only(top: 10),
-                  child: RowOfButtonActions(),
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(left: 30, top: 30),
-                  child: Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      'You may also like',
-                      style: TextStyle(
-                        fontSize: 18,
-                      ),
-                    ),
-                  ),
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(left: 30),
-                  child: ListviewOfHomePage(),
+        body:  
+                      
+                       SingleChildScrollView(
+                        
+                            child: SizedBox(
+                              height: MediaQuery.of(context).size.height,
+                            
+                             child: Column(
+                              
+                                
+                                  
+                                  children: [
+                                    const Padding(
+                                      padding: EdgeInsets.all(13),
+                                      child: BookDetailsAppBar(),
+                                    ),
+                                    ListViewElement(
+                                      aspectRatio: 1/1.5,
+                                      imageURL: 'https://th.bing.com/th?id=OIP.cVVOKQ82RKxkqvX_YzdydgHaGL&w=273&h=228&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2',
+                                      height: MediaQuery.of(context).size.height * 0.28,
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 32),
+                                      child: Text('The Book Title ',
+                                          style: GoogleFonts.adamina()
+                                              .copyWith(fontSize: 19, fontWeight: FontWeight.bold)),
+                                    ),
+                                    const Expanded(
+                                        child: SizedBox(
+                                      height: 7,
+                                    )),
+                                    Padding(
+                                        padding: const EdgeInsets.symmetric(horizontal: 30),
+                                        child: Text(
+                                            'Book Description : What are the topics that the book discuss',
+                                            maxLines: 3,
+                                            overflow: TextOverflow.ellipsis,
+                                            style: TextStyle(
+                                                color: Colors.white.withOpacity(0.5),
+                                                fontSize: 13))),
+                                    const RatingPart(),
+                                    const Padding(
+                                      padding: EdgeInsets.only(top: 10),
+                                      child: RowOfButtonActions(),
+                                    ),
+                                    const Padding(
+                                      padding: EdgeInsets.only(left: 30, top: 30),
+                                      child: Align(
+                                        alignment: Alignment.centerLeft,
+                                        child: Text(
+                                          'You may also like',
+                                          style: TextStyle(
+                                            fontSize: 18,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    const Padding(
+                                      padding: EdgeInsets.only(left: 30),
+                                      child:  ListviewOfHomePage(),
+                                    )
+                                  ],
+                                ),
+                           ),
+                         ),
+                       ),
+                     
+                    
+                  
+                
                 )
-              ],
-            ),
-          ),
-        ]),
-      ),
-    );
+        
+            
+              ;
+      
+    
   }
 }
