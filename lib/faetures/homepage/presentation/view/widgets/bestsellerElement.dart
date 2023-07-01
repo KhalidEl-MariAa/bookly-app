@@ -78,7 +78,7 @@ class BestSellerElement extends StatelessWidget {
                             ),
                             SizedBox(
                                 width: MediaQuery.of(context).size.width * 0.009),
-                            const Text(
+                             const Text(
                               '4.5',
                               style: TextStyle(
                                 fontSize: 15,
