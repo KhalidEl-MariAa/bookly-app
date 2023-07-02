@@ -75,6 +75,7 @@ class BestSellerElement extends StatelessWidget {
                             const Icon(
                               Icons.star_rate,
                               size: 15,
+                              color: Colors.amber,
                             ),
                             SizedBox(
                                 width: MediaQuery.of(context).size.width * 0.009),

@@ -28,7 +28,7 @@ class BestSellerListView extends StatelessWidget {
           return CustomError(error: state.errorMessage);
         }
         else{
-          return const CustomCircleProgress();
+          return const Center(child: CustomCircleProgress());
         }
       },
     );
