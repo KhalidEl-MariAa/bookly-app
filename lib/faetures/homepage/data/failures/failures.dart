@@ -52,7 +52,7 @@ class ServerFailure extends Failures{
         
       }
        else if(statuscode==404){
-        return ServerFailure('Your request not dound , please try later!');
+        return ServerFailure('Your request not found , please try later!');
 
       }
 
