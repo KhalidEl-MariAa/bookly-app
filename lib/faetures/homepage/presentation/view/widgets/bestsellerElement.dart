@@ -1,15 +1,13 @@
-import 'dart:ui';
+
 
 import 'package:bookly_app/core/routing.dart';
 import 'package:bookly_app/faetures/homepage/data/models/book_model/book_model.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 import 'package:go_router/go_router.dart';
 
-import '../../../../../core/assets.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class BestSellerElement extends StatelessWidget {
