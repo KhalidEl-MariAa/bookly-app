@@ -1,6 +1,7 @@
 import 'package:bookly_app/faetures/book_details/presentation/view/widgets/bd_AppBar.dart';
 import 'package:bookly_app/faetures/book_details/presentation/view/widgets/bd_buttonRow.dart';
 import 'package:bookly_app/faetures/book_details/presentation/view/widgets/bd_rating.dart';
+import 'package:bookly_app/faetures/book_details/presentation/view/widgets/relatedListView.dart';
 import 'package:bookly_app/faetures/homepage/presentation/view/widgets/listview.dart';
 
 import 'package:flutter/material.dart';
@@ -74,7 +75,7 @@ class BookDetailsPageBody extends StatelessWidget {
                                     ),
                                     const Padding(
                                       padding: EdgeInsets.only(left: 30),
-                                      child:  ListviewOfHomePage(),
+                                      child:  RelatedListView(),
                                     )
                                   ],
                                 ),

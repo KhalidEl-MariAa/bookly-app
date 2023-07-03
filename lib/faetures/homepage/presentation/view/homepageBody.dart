@@ -17,10 +17,10 @@ class Homepagebody extends StatelessWidget {
           SliverToBoxAdapter(
             child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
-                  CustomAppBar(),
+                children:  [
+                  const CustomAppBar(),
                   ListviewOfHomePage(),
-                  Padding(
+                  const Padding(
                     padding: EdgeInsets.only(
                       left: 14,
                       top: 20,

@@ -12,7 +12,7 @@ class SearchListView extends StatelessWidget {
       shrinkWrap: true,
       itemBuilder: (context, index) =>  Padding(
         padding:const  EdgeInsets.only(top: 10.0),
-        child: BestSellerElement(bookmodel: BookModel(),),
+        child: BestSellerElement(bookmodel: const BookModel(),),
       ),
       itemCount: 10,
     );
