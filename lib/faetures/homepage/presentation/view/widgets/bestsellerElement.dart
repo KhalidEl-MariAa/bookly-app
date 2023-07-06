@@ -1,12 +1,13 @@
 
 
 import 'package:bookly_app/core/routing.dart';
+import 'package:bookly_app/faetures/book_details/presentation/view/book_details_page.dart';
 import 'package:bookly_app/faetures/homepage/data/models/book_model/book_model.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 
 import 'package:flutter/material.dart';
 
-import 'package:go_router/go_router.dart';
+
 
 import 'package:google_fonts/google_fonts.dart';
 
@@ -17,9 +18,11 @@ class BestSellerElement extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (() {
-        GoRouter.of(context).push(Routes.bdroute,extra: bookmodel);
-      }),
+      onTap: () {
+        Navigator.pushNamed(context,Routes.bdroute,arguments: bookmodel);
+        }
+       
+      ,
       child:  Row(
           children: [
             SizedBox(

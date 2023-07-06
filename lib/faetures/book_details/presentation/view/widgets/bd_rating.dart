@@ -12,7 +12,8 @@ class RatingPart extends StatelessWidget {
       children: [
         const Icon(
           Icons.star_rate,
-          size: 17,
+          size: 20,
+          color: Colors.amber,
         ),
         SizedBox(width: MediaQuery.of(context).size.width * 0.009),
         const Text(

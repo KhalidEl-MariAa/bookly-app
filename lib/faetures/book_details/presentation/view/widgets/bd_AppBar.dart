@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
+
 
 class BookDetailsAppBar extends StatelessWidget {
   const BookDetailsAppBar({super.key});
@@ -10,7 +10,7 @@ class BookDetailsAppBar extends StatelessWidget {
       children: [
         IconButton(
             onPressed: () {
-              GoRouter.of(context).pop();
+              Navigator.pop(context);
             },
             iconSize: 27,
             icon: const Icon(Icons.highlight_remove)),

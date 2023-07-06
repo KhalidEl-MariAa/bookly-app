@@ -7,7 +7,7 @@ import 'package:bookly_app/faetures/homepage/presentation/view/widgets/listviewE
 import 'package:bookly_app/faetures/homepage/presentation/view_model/listviewBooks_cubit/cubit/list_view_books_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:go_router/go_router.dart';
+
 
 class ListviewOfHomePage extends StatelessWidget {
    ListviewOfHomePage({super.key});
@@ -28,7 +28,7 @@ class ListviewOfHomePage extends StatelessWidget {
                 itemBuilder: (context, index) {
                   return GestureDetector(
                     onTap: () {
-                       GoRouter.of(context).push(Routes.bdroute,extra: state.books[index]);
+                       Navigator.pushNamed(context, Routes.bdroute,arguments: state.books[index]);
                     },
                     child: ListViewElement(
                   

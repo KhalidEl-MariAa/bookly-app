@@ -2,7 +2,7 @@ import 'package:bookly_app/faetures/searchPage/presentation/view/widgets/searchR
 import 'package:bookly_app/faetures/searchPage/presentation/view/widgets/search_text_field.dart';
 import 'package:flutter/material.dart';
 
-import 'package:go_router/go_router.dart';
+
 
 class SearchPageBody extends StatelessWidget {
   const SearchPageBody({super.key});
@@ -16,7 +16,7 @@ class SearchPageBody extends StatelessWidget {
         children: [
           IconButton(
               onPressed: (() {
-                GoRouter.of(context).pop();
+                Navigator.pop(context);
               }),
               icon: const Icon(
                 Icons.keyboard_return_outlined,
