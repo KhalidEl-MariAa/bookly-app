@@ -73,7 +73,8 @@ class BookDetailsPageBody extends StatelessWidget {
                                     
                                   }
 
-                                }), 
+                                },
+                                 preview: bookModel.volumeInfo!.previewLink==null ? 'Not Availiable':'Free Preview' ,), 
                               ), 
                               const Padding( 
                                 padding: EdgeInsets.only(left: 30, top: 30), 

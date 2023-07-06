@@ -3,10 +3,11 @@ import 'package:flutter/material.dart';
 
 class RowOfButtonActions extends StatelessWidget {
    const RowOfButtonActions({required this.price,this.onPressed,
-    Key? key,
+    Key? key, required this.preview,
   }) : super(key: key);
   final String price;
  final void Function()? onPressed;
+ final String preview;
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +29,7 @@ class RowOfButtonActions extends StatelessWidget {
         ButtonAction(
           onPressed: onPressed ,
           bkColor: const Color.fromARGB(255, 255, 55, 55),
-          text: 'Free Preview',
+          text: preview,
           widthh: MediaQuery.of(context).size.width * 0.35,
           textcolor: Colors.white,
           borderRaduis: const BorderRadius.only(
