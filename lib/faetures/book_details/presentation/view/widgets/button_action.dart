@@ -10,7 +10,8 @@ class ButtonAction extends StatelessWidget {
       required this.textcolor,
       required this.bkColor,
       this.widthh,
-      this.pressColor})
+      this.pressColor,
+      this.onPressed})
       : super(key: key);
 
   BorderRadiusGeometry? borderRaduis;
@@ -19,6 +20,7 @@ class ButtonAction extends StatelessWidget {
   Color bkColor;
   double? widthh;
   Color? pressColor;
+  void Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +28,7 @@ class ButtonAction extends StatelessWidget {
       height: 40,
       width: widthh,
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: onPressed,
         style: ElevatedButton.styleFrom(
             foregroundColor: pressColor,
             backgroundColor: bkColor,

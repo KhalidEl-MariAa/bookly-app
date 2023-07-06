@@ -6,7 +6,8 @@ import 'package:bookly_app/faetures/homepage/data/models/book_model/book_model.d
 import 'package:bookly_app/faetures/homepage/presentation/view/widgets/listview.dart'; 
  
 import 'package:flutter/material.dart'; 
-import 'package:google_fonts/google_fonts.dart'; 
+import 'package:google_fonts/google_fonts.dart';
+import 'package:url_launcher/url_launcher.dart'; 
  
 import '../../../homepage/presentation/view/widgets/listviewElement.dart'; 
  
@@ -61,7 +62,18 @@ class BookDetailsPageBody extends StatelessWidget {
                               const RatingPart(), 
                               Padding( 
                                 padding:const EdgeInsets.only(top: 10), 
-                                child: RowOfButtonActions(price: bookModel.saleInfo!.listPrice==null ? ' Free book' : '${bookModel.saleInfo!.listPrice!.amount} L.E',), 
+                                child: RowOfButtonActions(price: bookModel.saleInfo!.listPrice==null ? ' Free book' : '${bookModel.saleInfo!.listPrice!.amount} L.E',
+                                onPressed: () async {
+                                  try {
+                                    var uri = Uri.parse(bookModel.volumeInfo!.previewLink!.toString());
+                                    await launchUrl(uri,mode: LaunchMode.externalApplication);
+                                    
+                                  } catch (e) {
+                                    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Sorry , an error with browser..'),duration: Duration(seconds: 6),));
+                                    
+                                  }
+
+                                }), 
                               ), 
                               const Padding( 
                                 padding: EdgeInsets.only(left: 30, top: 30), 

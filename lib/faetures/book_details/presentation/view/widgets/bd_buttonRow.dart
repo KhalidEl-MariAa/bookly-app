@@ -2,10 +2,11 @@ import 'package:bookly_app/faetures/book_details/presentation/view/widgets/butto
 import 'package:flutter/material.dart';
 
 class RowOfButtonActions extends StatelessWidget {
-  const RowOfButtonActions({required this.price,
+   const RowOfButtonActions({required this.price,this.onPressed,
     Key? key,
   }) : super(key: key);
   final String price;
+ final void Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -13,6 +14,9 @@ class RowOfButtonActions extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         ButtonAction(
+          onPressed: () {
+            
+          },
           bkColor: Colors.white,
           text: price,
           pressColor: Colors.amber,
@@ -22,6 +26,7 @@ class RowOfButtonActions extends StatelessWidget {
               topLeft: Radius.circular(10), bottomLeft: Radius.circular(10)),
         ),
         ButtonAction(
+          onPressed: onPressed ,
           bkColor: const Color.fromARGB(255, 255, 55, 55),
           text: 'Free Preview',
           widthh: MediaQuery.of(context).size.width * 0.35,
