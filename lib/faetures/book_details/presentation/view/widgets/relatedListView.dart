@@ -1,4 +1,5 @@
 import 'package:bookly_app/core/reusable.dart';
+import 'package:bookly_app/core/routing.dart';
 import 'package:bookly_app/core/widgets/customError.dart';
 import 'package:bookly_app/core/widgets/custom_circleprogress.dart';
 import 'package:bookly_app/faetures/book_details/presentation/view%20model/cubit/related_list_view_cubit.dart';
@@ -26,12 +27,16 @@ class RelatedListView extends StatelessWidget {
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
                 itemCount: state.books.length,
-                itemBuilder: (context, index) => ListViewElement(
-                    aspectRatio: 1 / 1.5,
-                    imageURL: state
-                        .books[index].volumeInfo!.imageLinks!.thumbnail
-                        .toString(),
-                    height: MediaQuery.of(context).size.height * 0.25),
+                itemBuilder: (context, index) => GestureDetector(
+                  onTap: () { Navigator.pushNamed(context, Routes.bdroute,arguments: state.books[index]);},
+                  child: ListViewElement(
+                      aspectRatio: 1 / 1.5,
+                      imageURL: state
+                          .books[index].volumeInfo!.imageLinks==null? '': state
+                          .books[index].volumeInfo!.imageLinks!.thumbnail
+                          .toString(),
+                      height: MediaQuery.of(context).size.height * 0.25),
+                ),
               ),
             ),
           );}
